@@ -1,5 +1,8 @@
 import 'dart:async';
+<<<<<<< HEAD
 import 'package:cloud_firestore/cloud_firestore.dart';
+=======
+>>>>>>> a4876d9 ([first commit])
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -7,11 +10,16 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:sender_app/domain/debug_printer.dart';
 import 'package:sender_app/domain/services/fl_background_service.dart';
 import 'package:sender_app/firebase_options.dart';
+<<<<<<< HEAD
 
 import 'package:sender_app/presentation/screens/location_page.dart';
 import 'package:sender_app/presentation/screens/login.dart';
 import 'package:sender_app/presentation/screens/request_screen.dart';
 import 'package:sender_app/presentation/screens/verify_email.dart';
+=======
+import 'package:sender_app/presentation/screens/login.dart';
+import 'package:sender_app/presentation/screens/request_screen.dart';
+>>>>>>> a4876d9 ([first commit])
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

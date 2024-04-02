@@ -56,7 +56,11 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
+<<<<<<< HEAD
           await getPlatformVersion() ?? 'Unknown platform version';
+=======
+          await _helloPlugin.getPlatformVersion() ?? 'Unknown platform version';
+>>>>>>> a4876d9 ([first commit])
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

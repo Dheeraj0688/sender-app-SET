@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import 'package:cloud_firestore/cloud_firestore.dart';
+=======
+>>>>>>> a4876d9 ([first commit])
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
@@ -15,7 +18,10 @@ import 'package:sender_app/presentation/screens/about_screen.dart';
 import 'package:sender_app/presentation/screens/login.dart';
 import 'package:sender_app/presentation/screens/notification_screen.dart';
 import 'package:sender_app/presentation/screens/sender_list_page.dart';
+<<<<<<< HEAD
 import 'package:sender_app/utils/sort.dart';
+=======
+>>>>>>> a4876d9 ([first commit])
 import 'package:sender_app/user/user_info.dart';
 import 'package:sender_app/utils/extensions/time_of_day_extension.dart';
 import 'package:sender_app/utils/validate_email.dart';
@@ -41,7 +47,11 @@ class _RequestPageState extends State<RequestPage> {
       context: context,
       initialTime: TimeOfDay.now(),
     );
+<<<<<<< HEAD
     print("picked time" + pickedTime.toString());
+=======
+
+>>>>>>> a4876d9 ([first commit])
     if (pickedTime != null) {
       setState(() {
         startEndType == 0 ? startTime = pickedTime : endTime = pickedTime;
@@ -59,7 +69,10 @@ class _RequestPageState extends State<RequestPage> {
 
   bool checkStartEndTime(TimeOfDay time1, TimeOfDay time2) {
     int code = time1.CompareTo(time2);
+<<<<<<< HEAD
     debugPrint("code is $code");
+=======
+>>>>>>> a4876d9 ([first commit])
     switch (code) {
       case 1:
         setState(() {
@@ -110,11 +123,14 @@ class _RequestPageState extends State<RequestPage> {
                 IconButton(
                   icon: Icon(Icons.logout),
                   onPressed: () async {
+<<<<<<< HEAD
                     var service = FlutterBackgroundService();
                     bool status = await service.isRunning();
                     if (status) {
                       service.invoke('stopService');
                     }
+=======
+>>>>>>> a4876d9 ([first commit])
                     await FirebaseAuth.instance.signOut();
                     final prefs = await SharedPreferences.getInstance();
 
@@ -340,17 +356,26 @@ class _RequestPageState extends State<RequestPage> {
                             }
                             DebugFile.saveTextData(
                                 '[RequestPage] Sending request');
+<<<<<<< HEAD
                             var newStartTime =
                                 "${startTime.hour}:${startTime.minute}";
                             var newEndTime =
                                 "${endTime.hour}:${endTime.minute}";
                             print("starttime $newStartTime $newEndTime");
+=======
+
+>>>>>>> a4876d9 ([first commit])
                             //creating notification
                             final Map<String, dynamic> data = {
                               "userEmail": CurrentUser.user['userEmail'],
                               "receiverEmail": rIdTxtCntrl.text,
+<<<<<<< HEAD
                               "startTime": newStartTime,
                               "endTime": newEndTime,
+=======
+                              "startTime": startTime.format(context),
+                              "endTime": endTime.format(context),
+>>>>>>> a4876d9 ([first commit])
                               'services': services,
                               "type": "REQUEST"
                             };

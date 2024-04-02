@@ -128,9 +128,13 @@ class WebrtcSender {
       // Listen for remote ICE candidates above
     } catch (e) {
       print('[VideoStream.createRoom] Error: ${e.toString()}');
+<<<<<<< HEAD
 
       DebugFile.saveTextData('[VideoStream.createRoom] Error: ${e.toString()}');
       rethrow;
+=======
+      DebugFile.saveTextData('[VideoStream.createRoom] Error: ${e.toString()}');
+>>>>>>> a4876d9 ([first commit])
     }
   }
 

@@ -70,6 +70,13 @@ class _AudioStreamPageState extends State<AudioStreamPage> {
                   setState(() {
                     _status = hangUpSucc ? 'hung up' : 'problem hanging up';
                   });
+<<<<<<< HEAD
+=======
+
+                  setState(() {
+                    _status = 'NOT_CONNECTED';
+                  });
+>>>>>>> a4876d9 ([first commit])
                 },
                 icon: Icon(Icons.stop_circle_outlined))
           ],

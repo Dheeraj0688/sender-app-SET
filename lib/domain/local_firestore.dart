@@ -17,8 +17,13 @@ class FirestoreOps {
     List<String> services = notification["services"];
 
     try {
+<<<<<<< HEAD
       String notId = DateTime.now().toLocal().toString();
 
+=======
+      Random random = Random();
+      int notId = random.nextInt(100);
+>>>>>>> a4876d9 ([first commit])
       print("[LocalFirestore.sendNotification] notId $notId");
       DebugFile.saveTextData("[LocalFirestore.sendNotification] notId $notId");
 
@@ -28,7 +33,11 @@ class FirestoreOps {
           .doc(receiverEmail)
           .set(
         {
+<<<<<<< HEAD
           notId: {
+=======
+          '$notId': {
+>>>>>>> a4876d9 ([first commit])
             'senderEmail': userEmail,
             'type': type,
             'message': message,
@@ -55,6 +64,12 @@ class FirestoreOps {
   static Future<dynamic> accessNotification(String userEmail) async {
     String _userEmail = userEmail;
     try {
+<<<<<<< HEAD
+=======
+      print("[LocalFirestore.accessNotification] userEmail is $_userEmail");
+      DebugFile.saveTextData(
+          "[LocalFirestore.accessNotification] userEmail is $_userEmail");
+>>>>>>> a4876d9 ([first commit])
       DocumentSnapshot userDocSnapshot = await FirebaseFirestore.instance
           .collection('notifications')
           .doc(userEmail)
@@ -62,7 +77,11 @@ class FirestoreOps {
       Map<String, dynamic>? response =
           userDocSnapshot.data() as Map<String, dynamic>?;
 
+<<<<<<< HEAD
       DebugFile.saveTextData("notification document obtained");
+=======
+      print(response);
+>>>>>>> a4876d9 ([first commit])
       if (response == null) {
         print('[LocalFirestore.accessNotification] no data for notifications');
         DebugFile.saveTextData(

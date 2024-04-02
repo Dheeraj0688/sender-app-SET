@@ -106,6 +106,9 @@ filePath=dataPath+"/videocapture_example.mp4";
     public String getSavedVideoFilePath() {
         return filePath; // Replace with the actual path
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a4876d9 ([first commit])
 }

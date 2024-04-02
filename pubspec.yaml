@@ -34,7 +34,11 @@ dependencies:
    # path: ./my_plugin/hello
  
   #for creating a path receiver->sender
+<<<<<<< HEAD
 
+=======
+  #socket_io_client: ^2.0.3+1
+>>>>>>> a4876d9 ([first commit])
  
   #for keeping the app alive in background
   flutter_background_service: ^5.0.5
@@ -50,14 +54,26 @@ dependencies:
   cloud_firestore: ^4.15.6
   firebase_storage: ^11.6.9
   google_maps_flutter: ^2.5.3
+<<<<<<< HEAD
   url_launcher: ^6.1.12
 
   #url_launcher: ^6.2.5
+=======
+  url_launcher: ^6.2.5
+>>>>>>> a4876d9 ([first commit])
   #for TextHandler
   path_provider: ^2.0.2
   flutter_webrtc: ^0.9.48+hotfix.1
   permission_handler: ^11.3.0
+<<<<<<< HEAD
 
+=======
+  expansion_tile_card: ^3.0.0
+  fluttertoast: ^8.2.4
+  #camera: ^0.10.5+9
+  #video_player: ^2.8.3
+  #camera_android: ^0.10.8+17
+>>>>>>> a4876d9 ([first commit])
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -88,9 +104,17 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+<<<<<<< HEAD
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+=======
+  assets:
+     - images/call.png
+     - images/person.png
+     - images/video-camera.png
+     - images/profile.png
+>>>>>>> a4876d9 ([first commit])
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

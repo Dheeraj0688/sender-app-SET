@@ -145,7 +145,11 @@ class _ServicePageState extends State<ServicePage> {
                                                                   options: {
                                                                     'FRONT_CAM':
                                                                         false,
+<<<<<<< HEAD
                                                                     'AUDIO_ONLY':
+=======
+                                                                    'ADUIO_ONLY':
+>>>>>>> a4876d9 ([first commit])
                                                                         false
                                                                   })));
                                                 },

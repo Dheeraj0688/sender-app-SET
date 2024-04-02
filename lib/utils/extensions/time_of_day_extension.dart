@@ -6,7 +6,10 @@ extension TimeOfDayExtension on TimeOfDay {
     int startMin = hour * 60 + minute;
     int endMin = endTime.hour * 60 + endTime.minute;
     var now = TimeOfDay.now();
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4876d9 ([first commit])
     if (startMin > endMin) {
       return 1;
     }
@@ -20,10 +23,14 @@ extension TimeOfDayExtension on TimeOfDay {
       return 3;
     }
 
+<<<<<<< HEAD
     if (hour <= now.hour) {
       if (hour < now.hour) return 4;
       if (minute < now.minute + 1) return 4;
     }
+=======
+    if (hour < now.hour || minute < now.minute + 1) return 4;
+>>>>>>> a4876d9 ([first commit])
 
     return 0;
   }

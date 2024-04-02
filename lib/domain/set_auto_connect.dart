@@ -12,7 +12,11 @@ setAutoConnect(
     required String receiverEmail,
     required List<String> services}) {
   late int minutesToAutoConnect;
+<<<<<<< HEAD
   //late int minutesToDissconnect;
+=======
+  late int minutesToDissconnect;
+>>>>>>> a4876d9 ([first commit])
   late int timeSlot;
 
   int _calculateTimeDifference(TimeOfDay startTime, TimeOfDay endTime) {
@@ -30,8 +34,11 @@ setAutoConnect(
   }
 
   Future<void> saveToSharedPreferences() async {
+<<<<<<< HEAD
     debugPrint(
         "[setAutoConnect] Saving to shared preferences: timeSlot: $timeSlot, $minutesToAutoConnect");
+=======
+>>>>>>> a4876d9 ([first commit])
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     prefs.setInt('timeSlot', timeSlot);
@@ -40,7 +47,11 @@ setAutoConnect(
 
     prefs.setInt('minutesToAutoConnect',
         minutesToAutoConnect > 1 ? minutesToAutoConnect : 0);
+<<<<<<< HEAD
     // prefs.setInt('minutesToDissconnect', minutesToDissconnect);
+=======
+    prefs.setInt('minutesToDissconnect', minutesToDissconnect);
+>>>>>>> a4876d9 ([first commit])
     prefs.setStringList('services', services);
   }
 
@@ -48,7 +59,11 @@ setAutoConnect(
   //setting auto connect 5 minutes earlier
   minutesToAutoConnect =
       _calculateTimeDifference(TimeOfDay.now(), startTime); //-5
+<<<<<<< HEAD
   // minutesToDissconnect = _calculateTimeDifference(TimeOfDay.now(), endTime);
+=======
+  minutesToDissconnect = _calculateTimeDifference(TimeOfDay.now(), endTime);
+>>>>>>> a4876d9 ([first commit])
   saveToSharedPreferences().then((value) {
     print("[setAutoConnect] successfully stored values in sharedpreferences");
     DebugFile.saveTextData(
